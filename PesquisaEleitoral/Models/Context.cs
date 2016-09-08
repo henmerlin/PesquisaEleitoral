@@ -8,8 +8,9 @@ namespace PesquisaEleitoral.Models
 {
     public class Context : DbContext
     {
-        public Context() : base("PesquisaEleitoral")
+        public Context()
         {
+            this.Configuration.LazyLoadingEnabled = false;
         }
 
         public DbSet<Bairro> Bairros { get; set; }

@@ -6,9 +6,10 @@ using System.Web;
 
 namespace PesquisaEleitoral.Models
 {
-    public class Candidato
+    public partial class Candidato
     {
 
+        [Key]
         int Numero { get; set; }
 
         [Required]

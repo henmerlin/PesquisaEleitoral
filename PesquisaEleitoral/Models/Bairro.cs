@@ -6,8 +6,9 @@ using System.Web;
 
 namespace PesquisaEleitoral.Models
 {
-    public class Bairro
+    public partial class Bairro
     {
+        [Key]
         int Id { get; set; }
 
         [Required]
