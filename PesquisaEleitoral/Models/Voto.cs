@@ -1,21 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
 namespace PesquisaEleitoral.Models
 {
+    [Table("Votos")]
     public partial class Voto
     {
 
         [Key]
-        int Id { get; set; }
+        public int Id { get; set; }
 
         [Required]
-        Candidato Candidato { get; set; }
+        public Candidato Candidato { get; set; }
 
-        DateTime Data { get; set; }
+        public DateTime Data { get; set; }
 
 
 

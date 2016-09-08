@@ -1,18 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
 namespace PesquisaEleitoral.Models
 {
+    [Table("Bairros")]
     public partial class Bairro
     {
         [Key]
-        int Id { get; set; }
+        public int Id { get; set; }
 
         [Required]
-        string Nome { get; set; }
+        public string Nome { get; set; }
 
     }
 }
