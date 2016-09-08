@@ -6,11 +6,9 @@ using System.Web;
 
 namespace PesquisaEleitoral.DAL
 {
-    class CandidatoDAO
+    public class CandidatoDAO
     {
         private static Context ctx = SingletonContext.Instance.Context;
 
-
     }
-
 }

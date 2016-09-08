@@ -10,7 +10,7 @@ namespace PesquisaEleitoral.Models
     {
         public Context() : base("PesquisaEleitoral")
         {
-            this.Configuration.LazyLoadingEnabled = false;
+            Configuration.LazyLoadingEnabled = false;
         }
 
         public DbSet<Bairro> Bairros { get; set; }

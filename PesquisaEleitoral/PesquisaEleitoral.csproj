@@ -384,6 +384,7 @@
     <Compile Include="CadBairro.aspx.designer.cs">
       <DependentUpon>CadBairro.aspx</DependentUpon>
     </Compile>
+    <Compile Include="DAL\BairroDAO.cs" />
     <Compile Include="DAL\CandidatoDAO.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>

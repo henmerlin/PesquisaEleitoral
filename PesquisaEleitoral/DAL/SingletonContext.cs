@@ -8,6 +8,7 @@ namespace PesquisaEleitoral.Models
     public class SingletonContext
     {
         private static readonly SingletonContext instance = new SingletonContext();
+
         private readonly Context context;
 
         private SingletonContext()

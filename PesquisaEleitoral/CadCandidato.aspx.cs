@@ -18,8 +18,6 @@ namespace PesquisaEleitoral
         protected void Cadastrar(object sender, EventArgs e)
         {
 
-            HttpContext context = HttpContext.Current;
-
             Models.Bairro b = new Models.Bairro();
             b.Nome = txtNome.Text;
 
