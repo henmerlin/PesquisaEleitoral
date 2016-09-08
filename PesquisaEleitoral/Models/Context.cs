@@ -8,7 +8,7 @@ namespace PesquisaEleitoral.Models
 {
     public class Context : DbContext
     {
-        public Context()
+        public Context() : base("PesquisaEleitoral")
         {
             this.Configuration.LazyLoadingEnabled = false;
         }
