@@ -6,8 +6,8 @@ using System.Web;
 
 namespace PesquisaEleitoral.DAL
 {
-    public class UsuarioDAO : DefaultDAO
+    public class DefaultDAO
     {
-
+        protected static ApplicationDbContext ctx = SingletonContext.Instance.Context;
     }
 }

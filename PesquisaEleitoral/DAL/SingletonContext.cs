@@ -9,11 +9,11 @@ namespace PesquisaEleitoral.Models
     {
         private static readonly SingletonContext instance = new SingletonContext();
 
-        private readonly Context context;
+        private readonly ApplicationDbContext context;
 
         private SingletonContext()
         {
-            context = new Context();
+            context = new ApplicationDbContext();
         }
 
         public static SingletonContext Instance
@@ -24,7 +24,7 @@ namespace PesquisaEleitoral.Models
             }
         }
 
-        public Context Context
+        public ApplicationDbContext Context
         {
             get
             {

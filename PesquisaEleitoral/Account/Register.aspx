@@ -18,6 +18,22 @@
                     CssClass="text-danger" ErrorMessage="The email field is required." />
             </div>
         </div>
+
+        <div class="form-group">
+            <asp:Label runat="server" AssociatedControlID="DataNascimento" CssClass="col-md-2 control-label">Data de Nascimento</asp:Label>
+            <div class="col-md-10">
+                <asp:Calendar ID="DataNascimento" runat="server"></asp:Calendar>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <asp:Label runat="server" AssociatedControlID="Bairro" CssClass="col-md-2 control-label">Bairro</asp:Label>
+            <div class="col-md-10">
+                <asp:ListBox ID="listBairros" runat="server"></asp:ListBox>
+            </div>
+        </div>
+
+
         <div class="form-group">
             <asp:Label runat="server" AssociatedControlID="Password" CssClass="col-md-2 control-label">Password</asp:Label>
             <div class="col-md-10">

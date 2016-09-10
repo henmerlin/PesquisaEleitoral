@@ -6,9 +6,8 @@ using System.Web;
 
 namespace PesquisaEleitoral.DAL
 {
-    public class CandidatoDAO
+    public class CandidatoDAO : DefaultDAO
     {
-        private static Context ctx = SingletonContext.Instance.Context;
 
         public static bool AdicionarCandidato(Models.Candidato c)
         {
@@ -23,6 +22,22 @@ namespace PesquisaEleitoral.DAL
                 return false;
             }
         }
+
+        public static Models.Candidato VerificarCandidatoPorNome(Models.Candidato c)
+        {
+            return ctx.Candidatos.FirstOrDefault(x => x.Nome.Equals(c.Nome));
+        }
+
+        public static Models.Candidato VerificarCandidatoPorNumero(Models.Candidato c)
+        {
+            return ctx.Candidatos.FirstOrDefault(x => x.Numero == c.Numero);
+        }
+
+        public static List<Models.Candidato> RetornarLista()
+        {
+            return ctx.Candidatos.ToList();
+        }
+
 
     }
 

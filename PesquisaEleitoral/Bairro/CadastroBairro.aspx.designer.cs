@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PesquisaEleitoral {
+namespace PesquisaEleitoral.Bairro {
     
     
-    public partial class CadCandidato {
+    public partial class CadastroBairro {
         
         /// <summary>
         /// txtNome control.

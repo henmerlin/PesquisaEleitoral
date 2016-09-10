@@ -15,9 +15,12 @@ namespace PesquisaEleitoral.Models
         public int Id { get; set; }
 
         [Required]
+        [StringLength(450)]
+        [Index(IsUnique = true)]
         public string Nome { get; set; }
 
         [Required]
+        [Index(IsUnique = true)]
         public int Numero { get; set; }
 
 

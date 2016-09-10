@@ -7,27 +7,27 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PesquisaEleitoral {
+namespace PesquisaEleitoral.Voto {
     
     
-    public partial class CadBairro {
+    public partial class Votar {
         
         /// <summary>
-        /// txtNome control.
+        /// CandidadosDS control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNome;
+        protected global::System.Web.UI.WebControls.SqlDataSource CandidadosDS;
         
         /// <summary>
-        /// bntCadastrar control.
+        /// someRep control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button bntCadastrar;
+        protected global::System.Web.UI.WebControls.Repeater someRep;
     }
 }

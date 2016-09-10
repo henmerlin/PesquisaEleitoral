@@ -3,7 +3,7 @@
 
     
     <hgroup>
-        <h2 class="text-warning">Erro ao realizar cadastro, candidato já cadastrado.</h2>
+        <h2 class="text-warning">Erro ao realizar cadastro, número do candidato ou nome já cadastrados.</h2>
     </hgroup>
 
 </asp:Content>

@@ -6,9 +6,28 @@ using System.Web;
 
 namespace PesquisaEleitoral.DAL
 {
-    public class BairroDAO
+    public class BairroDAO : DefaultDAO
     {
-        private static Context ctx = SingletonContext.Instance.Context;
+
+        public static bool AdicionarBairro(Models.Bairro b)
+        {
+            try
+            {
+                ctx.Bairros.Add(b);
+                ctx.SaveChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        public static Models.Bairro VerificarBairroPorNome(Models.Bairro b)
+        {
+            return ctx.Bairros.FirstOrDefault(x => x.Nome.Equals(b.Nome));
+        }
 
     }
+
 }

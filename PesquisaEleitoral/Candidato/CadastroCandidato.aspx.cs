@@ -18,27 +18,34 @@ namespace PesquisaEleitoral.Candidato
         protected void Cadastrar(object sender, EventArgs e)
         {
 
+            Models.Candidato c = new Models.Candidato();
+            c.Nome = txtNome.Text;
+
             try
             {
-                Models.Candidato c = new Models.Candidato();
-                c.Nome = txtNome.Text;
-               // c.Numero = Int32.Parse(txtNumero.Text);
+                c.Numero = Int32.Parse(txtNumero.Text);
+            }
+            catch (Exception)
+            {
+                Response.Redirect("/Candidato/CadastroError");
+            }
 
+            Models.Candidato c1 = CandidatoDAO.VerificarCandidatoPorNome(c);
+            Models.Candidato c2 = CandidatoDAO.VerificarCandidatoPorNumero(c);
 
+            if(c1 == null && c2 == null)
+            {
                 if (CandidatoDAO.AdicionarCandidato(c))
                 {
-
                     Response.Redirect("/Candidato/CadastroSuccess");
                 }
                 else
                 {
                     Response.Redirect("/Candidato/CadastroError");
                 }
-
-            }
-            catch (Exception)
+            }else
             {
-                Response.Redirect("/Candidato/CadastroError");
+                Response.Redirect("/Candidato/CadastroExistente");
             }
         }
     }

@@ -5,14 +5,14 @@ namespace PesquisaEleitoral.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<PesquisaEleitoral.Models.Context>
+    internal sealed class Configuration : DbMigrationsConfiguration<PesquisaEleitoral.Models.ApplicationDbContext>
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = true;
+            //AutomaticMigrationsEnabled = true;
         }
 
-        protected override void Seed(PesquisaEleitoral.Models.Context context)
+        protected override void Seed(PesquisaEleitoral.Models.ApplicationDbContext context)
         {
             //  This method will be called after migrating to the latest version.
 

@@ -197,8 +197,10 @@
     <Content Include="Account\ResetPasswordConfirmation.aspx" />
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
-    <Content Include="CadCandidato.aspx" />
-    <Content Include="CadBairro.aspx" />
+    <Content Include="Bairro\CadastroBairro.aspx" />
+    <Content Include="Bairro\CadastroError.aspx" />
+    <Content Include="Bairro\CadastroExistente.aspx" />
+    <Content Include="Bairro\CadastroSuccess.aspx" />
     <Content Include="Candidato\CadastroCandidato.aspx" />
     <Content Include="Candidato\CadastroExistente.aspx" />
     <Content Include="Candidato\CadastroSuccess.aspx" />
@@ -251,6 +253,7 @@
     <Content Include="Global.asax" />
     <Content Include="Site.Master" />
     <Content Include="ViewSwitcher.ascx" />
+    <Content Include="Voto\Votar.aspx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <Content Include="packages.config" />
@@ -374,19 +377,33 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
-    <Compile Include="CadCandidato.aspx.cs">
-      <DependentUpon>CadCandidato.aspx</DependentUpon>
+    <Compile Include="Bairro\CadastroBairro.aspx.cs">
+      <DependentUpon>CadastroBairro.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="CadCandidato.aspx.designer.cs">
-      <DependentUpon>CadCandidato.aspx</DependentUpon>
+    <Compile Include="Bairro\CadastroBairro.aspx.designer.cs">
+      <DependentUpon>CadastroBairro.aspx</DependentUpon>
     </Compile>
-    <Compile Include="CadBairro.aspx.cs">
-      <DependentUpon>CadBairro.aspx</DependentUpon>
+    <Compile Include="Bairro\CadastroError.aspx.cs">
+      <DependentUpon>CadastroError.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="CadBairro.aspx.designer.cs">
-      <DependentUpon>CadBairro.aspx</DependentUpon>
+    <Compile Include="Bairro\CadastroError.aspx.designer.cs">
+      <DependentUpon>CadastroError.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Bairro\CadastroExistente.aspx.cs">
+      <DependentUpon>CadastroExistente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Bairro\CadastroExistente.aspx.designer.cs">
+      <DependentUpon>CadastroExistente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Bairro\CadastroSuccess.aspx.cs">
+      <DependentUpon>CadastroSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Bairro\CadastroSuccess.aspx.designer.cs">
+      <DependentUpon>CadastroSuccess.aspx</DependentUpon>
     </Compile>
     <Compile Include="Candidato\CadastroCandidato.aspx.cs">
       <DependentUpon>CadastroCandidato.aspx</DependentUpon>
@@ -416,6 +433,7 @@
     <Compile Include="Candidato\CadastroError.aspx.designer.cs">
       <DependentUpon>CadastroError.aspx</DependentUpon>
     </Compile>
+    <Compile Include="DAL\DefaultDAO.cs" />
     <Compile Include="DAL\UsuarioDAO.cs" />
     <Compile Include="DAL\BairroDAO.cs" />
     <Compile Include="DAL\CandidatoDAO.cs" />
@@ -432,10 +450,8 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Bairro.cs" />
     <Compile Include="Models\Candidato.cs" />
-    <Compile Include="Models\Context.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="DAL\SingletonContext.cs" />
-    <Compile Include="Models\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
@@ -458,6 +474,13 @@
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Voto\Votar.aspx.cs">
+      <DependentUpon>Votar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Voto\Votar.aspx.designer.cs">
+      <DependentUpon>Votar.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

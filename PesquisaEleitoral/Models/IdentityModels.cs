@@ -5,6 +5,8 @@ using System.Web;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Data.Entity;
+using System.ComponentModel.DataAnnotations;
 
 namespace PesquisaEleitoral.Models
 {
@@ -12,11 +14,12 @@ namespace PesquisaEleitoral.Models
     // You can add User data for the user by adding more properties to your User class, please visit http://go.microsoft.com/fwlink/?LinkID=317594 to learn more.
     public class ApplicationUser : IdentityUser
     {
+        [Required, Column(TypeName = "Date"), DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
+        public DateTime DataNascimento { get; set; }
 
-        public int Voto { get; set; }
-        [ForeignKey("Id")]
-        public Candidato CandVoto { get; set; }
+        public Bairro Bairro { get; set; }
 
+        public Candidato Voto { get; set; }
 
         public ClaimsIdentity GenerateUserIdentity(ApplicationUserManager manager)
         {
@@ -40,6 +43,20 @@ namespace PesquisaEleitoral.Models
             : base("ASP_PesquisaEleitoral")
         {
         }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder); // This needs to go before the other rules!
+
+            modelBuilder.Entity<ApplicationUser>().ToTable("Usuarios");
+            modelBuilder.Entity<IdentityRole>().ToTable("Role");
+            modelBuilder.Entity<IdentityUserRole>().ToTable("UserRole");
+            modelBuilder.Entity<IdentityUserClaim>().ToTable("UserClaim");
+            modelBuilder.Entity<IdentityUserLogin>().ToTable("UserLogin");
+        }
+
+        public DbSet<Bairro> Bairros { get; set; }
+        public DbSet<Candidato> Candidatos { get; set; }
 
         public static ApplicationDbContext Create()
         {
