@@ -12,11 +12,12 @@ namespace PesquisaEleitoral.Models
     {
 
         [Key]
-        public int Numero { get; set; }
+        public int Id { get; set; }
 
         [Required]
         public string Nome { get; set; }
 
-
+        [Required]
+        public int Numero { get; set; }
     }
 }

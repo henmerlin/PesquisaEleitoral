@@ -30,7 +30,7 @@ namespace PesquisaEleitoral.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("PesquisaEleitoral")
+            : base("ASP_PesquisaEleitoral")
         {
         }
 

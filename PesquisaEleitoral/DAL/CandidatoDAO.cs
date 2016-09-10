@@ -6,10 +6,23 @@ using System.Web;
 
 namespace PesquisaEleitoral.DAL
 {
-    class CandidatoDAO
+    public class CandidatoDAO
     {
         private static Context ctx = SingletonContext.Instance.Context;
 
+        public static bool AdicionarCandidato(Models.Candidato c)
+        {
+            try
+            {
+                ctx.Candidatos.Add(c);
+                ctx.SaveChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
 
     }
 

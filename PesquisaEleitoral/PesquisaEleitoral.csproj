@@ -199,6 +199,10 @@
     <Content Include="Account\VerifyPhoneNumber.aspx" />
     <Content Include="CadCandidato.aspx" />
     <Content Include="CadBairro.aspx" />
+    <Content Include="Candidato\CadastroCandidato.aspx" />
+    <Content Include="Candidato\CadastroExistente.aspx" />
+    <Content Include="Candidato\CadastroSuccess.aspx" />
+    <Content Include="Candidato\CadastroError.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
@@ -384,6 +388,34 @@
     <Compile Include="CadBairro.aspx.designer.cs">
       <DependentUpon>CadBairro.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Candidato\CadastroCandidato.aspx.cs">
+      <DependentUpon>CadastroCandidato.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Candidato\CadastroCandidato.aspx.designer.cs">
+      <DependentUpon>CadastroCandidato.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Candidato\CadastroExistente.aspx.cs">
+      <DependentUpon>CadastroExistente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Candidato\CadastroExistente.aspx.designer.cs">
+      <DependentUpon>CadastroExistente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Candidato\CadastroSuccess.aspx.cs">
+      <DependentUpon>CadastroSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Candidato\CadastroSuccess.aspx.designer.cs">
+      <DependentUpon>CadastroSuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Candidato\CadastroError.aspx.cs">
+      <DependentUpon>CadastroError.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Candidato\CadastroError.aspx.designer.cs">
+      <DependentUpon>CadastroError.aspx</DependentUpon>
+    </Compile>
     <Compile Include="DAL\BairroDAO.cs" />
     <Compile Include="DAL\CandidatoDAO.cs" />
     <Compile Include="Default.aspx.cs">
@@ -396,12 +428,17 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201609101615257_Id.cs" />
+    <Compile Include="Migrations\201609101615257_Id.Designer.cs">
+      <DependentUpon>201609101615257_Id.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Bairro.cs" />
     <Compile Include="Models\Candidato.cs" />
     <Compile Include="Models\Context.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="DAL\SingletonContext.cs" />
+    <Compile Include="Models\Usuario.cs" />
     <Compile Include="Models\Voto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
@@ -429,6 +466,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201609101615257_Id.resx">
+      <DependentUpon>201609101615257_Id.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
