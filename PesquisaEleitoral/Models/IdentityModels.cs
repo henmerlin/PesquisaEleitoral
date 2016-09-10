@@ -4,15 +4,20 @@ using System.Threading.Tasks;
 using System.Web;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
-using Microsoft.AspNet.Identity.Owin;
-using Microsoft.Owin.Security;
-using PesquisaEleitoral.Models;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PesquisaEleitoral.Models
 {
+
     // You can add User data for the user by adding more properties to your User class, please visit http://go.microsoft.com/fwlink/?LinkID=317594 to learn more.
     public class ApplicationUser : IdentityUser
     {
+
+        public int Voto { get; set; }
+        [ForeignKey("Id")]
+        public Candidato CandVoto { get; set; }
+
+
         public ClaimsIdentity GenerateUserIdentity(ApplicationUserManager manager)
         {
             // Note the authenticationType must match the one defined in CookieAuthenticationOptions.AuthenticationType
@@ -26,6 +31,8 @@ namespace PesquisaEleitoral.Models
             return Task.FromResult(GenerateUserIdentity(manager));
         }
     }
+
+
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {

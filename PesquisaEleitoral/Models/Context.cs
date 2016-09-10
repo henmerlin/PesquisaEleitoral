@@ -16,7 +16,7 @@ namespace PesquisaEleitoral.Models
 
         public DbSet<Bairro> Bairros { get; set; }
         public DbSet<Candidato> Candidatos { get; set; }
-        public DbSet<Voto> Votos { get; set; }
+        public DbSet<Usuario> Usuarios { get; set; }
 
     }
 }

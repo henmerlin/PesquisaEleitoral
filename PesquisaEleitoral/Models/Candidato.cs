@@ -19,5 +19,8 @@ namespace PesquisaEleitoral.Models
 
         [Required]
         public int Numero { get; set; }
+
+
+
     }
 }
