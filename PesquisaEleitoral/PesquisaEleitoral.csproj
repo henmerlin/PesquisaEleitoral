@@ -493,10 +493,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201609141631277_Oi.cs" />
-    <Compile Include="Migrations\201609141631277_Oi.Designer.cs">
-      <DependentUpon>201609141631277_Oi.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Bairro.cs" />
     <Compile Include="Models\Candidato.cs" />
@@ -554,9 +550,6 @@
     <EmbeddedResource Include="Apuracao\TotalFE.rdlc" />
     <EmbeddedResource Include="Apuracao\TotalBairro.rdlc" />
     <EmbeddedResource Include="Apuracao\TotalCandidato.rdlc" />
-    <EmbeddedResource Include="Migrations\201609141631277_Oi.resx">
-      <DependentUpon>201609141631277_Oi.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
