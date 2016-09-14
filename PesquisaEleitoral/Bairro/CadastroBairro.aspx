@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="CadastroBairro.aspx.cs" Inherits="PesquisaEleitoral.Bairro.CadastroBairro" %>
+﻿<%@ Page Title="Bairro" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="CadastroBairro.aspx.cs" Inherits="PesquisaEleitoral.Bairro.CadastroBairro" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
     <h2>Cadastro de Bairro</h2>
