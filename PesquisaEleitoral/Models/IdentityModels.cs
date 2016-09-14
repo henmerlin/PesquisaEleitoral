@@ -7,6 +7,7 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel;
 
 namespace PesquisaEleitoral.Models
 {
@@ -24,6 +25,9 @@ namespace PesquisaEleitoral.Models
         [ForeignKey("Voto"), DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int? VotoId { get; set; }
         public Candidato Voto { get; set; }
+
+        [DefaultValue(false)]
+        public bool Admin { get; set; }
 
         public ClaimsIdentity GenerateUserIdentity(ApplicationUserManager manager)
         {

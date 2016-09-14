@@ -62,13 +62,18 @@
                                     <li><a runat="server" href="/Apuracao/ApuracaoFaixaEtaria">Faixa Etária</a></li>
                                   </ul>
                                 </li>
-                                <li class="dropdown">
-                                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cadastro<span class="caret"></span></a>
-                                  <ul class="dropdown-menu">
-                                    <li><a runat="server" href="/Bairro/CadastroBairro">Bairro</a></li>
-                                    <li><a runat="server" href="/Candidato/CadastroCandidato">Candidato</a></li>
-                                  </ul>
-                                </li>
+
+                                
+                                <asp:Panel ID="PanelDropDown" runat="server" Visible="false">
+                                    <li class="dropdown">
+                                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cadastro<span class="caret"></span></a>
+                                      <ul class="dropdown-menu">
+                                        <li><a runat="server" href="/Bairro/CadastroBairro">Bairro</a></li>
+                                        <li><a runat="server" href="/Candidato/CadastroCandidato">Candidato</a></li>
+                                      </ul>
+                                    </li>
+                                </asp:Panel>
+
                              </LoggedInTemplate>
                         </asp:LoginView>
                     </ul>

@@ -7,6 +7,8 @@ using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Microsoft.AspNet.Identity;
+using PesquisaEleitoral.DAL;
+using PesquisaEleitoral.Models;
 
 namespace PesquisaEleitoral
 {
@@ -69,6 +71,22 @@ namespace PesquisaEleitoral
 
         protected void Page_Load(object sender, EventArgs e)
         {
+        }
+
+        protected void Page_PreRender(object sender, EventArgs e)
+        {
+            ApplicationUser u = new ApplicationUser();
+            u.UserName = System.Web.HttpContext.Current.User.Identity.GetUserName();
+            u = UsuarioDAO.VerificarCandidatoPorNome(u);
+
+            if (!u.Admin)
+            {
+                Control myControl1 = FindControl("PanelDropDown");
+                if (myControl1 != null)
+                {
+                    myControl1.Visible = false;
+                }
+            }
 
         }
 
