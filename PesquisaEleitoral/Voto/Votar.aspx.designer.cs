@@ -13,21 +13,39 @@ namespace PesquisaEleitoral.Voto {
     public partial class Votar {
         
         /// <summary>
-        /// CandidadosDS control.
+        /// candidatos control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource CandidadosDS;
+        protected global::System.Web.UI.WebControls.Repeater candidatos;
         
         /// <summary>
-        /// someRep control.
+        /// ddpCandidatos control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater someRep;
+        protected global::System.Web.UI.WebControls.DropDownList ddpCandidatos;
+        
+        /// <summary>
+        /// bntCadastrar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button bntCadastrar;
+        
+        /// <summary>
+        /// dsCandidatos control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource dsCandidatos;
     }
 }

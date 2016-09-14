@@ -1,4 +1,6 @@
-﻿using PesquisaEleitoral.DAL;
+﻿using Microsoft.AspNet.Identity;
+using PesquisaEleitoral.DAL;
+using PesquisaEleitoral.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +17,27 @@ namespace PesquisaEleitoral.Voto
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            this.Candidatos = CandidatoDAO.RetornarLista();
+
         }
+
+        protected void Cadastrar(object sender, EventArgs e)
+        {
+
+            ApplicationUser u = new ApplicationUser();
+            u.UserName = System.Web.HttpContext.Current.User.Identity.GetUserName();
+            u = UsuarioDAO.VerificarCandidatoPorNome(u);
+            u.VotoId = Int32.Parse(ddpCandidatos.SelectedItem.Value);
+
+            if (UsuarioDAO.AlterarUsuario(u))
+            {
+                Response.Redirect("/Voto/VotoSuccess");
+            }
+            else
+            {
+                Response.Redirect("/Bairro/VotoError");
+            }
+
+        }
+        
     }
 }

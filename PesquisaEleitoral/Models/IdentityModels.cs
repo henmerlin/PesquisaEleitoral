@@ -17,8 +17,12 @@ namespace PesquisaEleitoral.Models
         [Required, Column(TypeName = "Date"), DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
         public DateTime DataNascimento { get; set; }
 
+        [ForeignKey("Bairro"), DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int? BairroId { get; set; }
         public Bairro Bairro { get; set; }
 
+        [ForeignKey("Voto"), DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int? VotoId { get; set; }
         public Candidato Voto { get; set; }
 
         public ClaimsIdentity GenerateUserIdentity(ApplicationUserManager manager)

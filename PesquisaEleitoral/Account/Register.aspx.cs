@@ -17,10 +17,7 @@ namespace PesquisaEleitoral.Account
             var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
             var signInManager = Context.GetOwinContext().Get<ApplicationSignInManager>();
 
-            Models.Bairro b = new Models.Bairro();
-            b.Id = Int32.Parse(ddpBairro.SelectedItem.Value);
-
-            var user = new ApplicationUser() { UserName = Email.Text, Email = Email.Text, DataNascimento = DataNascimento.SelectedDate, Bairro = BairroDAO.VerificarBairroPorId(b)};
+            var user = new ApplicationUser() { UserName = Email.Text, Email = Email.Text, DataNascimento = DataNascimento.SelectedDate, BairroId =Int32.Parse(ddpBairro.SelectedItem.Value)};
             IdentityResult result = manager.Create(user, Password.Text);
             if (result.Succeeded)
             {
