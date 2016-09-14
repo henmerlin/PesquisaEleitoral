@@ -10,7 +10,8 @@
 namespace PesquisaEleitoral.Apuracao {
     
     
-    public partial class Apuracao {
+    public partial class ApuracaoFaixaEtaria
+    {
         
         /// <summary>
         /// ReportViewer1 control.
