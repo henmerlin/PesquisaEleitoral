@@ -5,7 +5,17 @@
     <div class="jumbotron">
         <h1>Pesquisa Eleitoral</h1>
         <p class="lead">Trabalho Prático 1 – C2, C4 e C6</p>
-        <p><a href="/Apuracao/Apuracao" class="btn btn-primary btn-lg">Apuração de Votos &raquo;</a></p>
+        
+        <asp:LoginView runat="server" ViewStateMode="Disabled">
+            <LoggedInTemplate>
+                <p><a href="/Apuracao/ApuracaoTotal" class="btn btn-primary btn-lg">Apuração de Votos &raquo;</a></p>
+            </LoggedInTemplate>
+             <AnonymousTemplate>
+                 <p><a href="/Account/Register" class="btn btn-primary btn-lg">Registre-se &raquo;</a></p>
+             </AnonymousTemplate>
+        </asp:LoginView> 
+        
+       
     </div>
 
     <div class="row">

@@ -198,7 +198,9 @@
     <Content Include="Account\ResetPasswordConfirmation.aspx" />
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
-    <Content Include="Apuracao\Apuracao.aspx" />
+    <Content Include="Apuracao\ApuracaoBairro.aspx" />
+    <Content Include="Apuracao\ApuracaoFaixaEtaria.aspx" />
+    <Content Include="Apuracao\ApuracaoTotal.aspx" />
     <Content Include="Bairro\CadastroBairro.aspx" />
     <Content Include="Bairro\CadastroError.aspx" />
     <Content Include="Bairro\CadastroExistente.aspx" />
@@ -392,12 +394,26 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
-    <Compile Include="Apuracao\Apuracao.aspx.cs">
-      <DependentUpon>Apuracao.aspx</DependentUpon>
+    <Compile Include="Apuracao\ApuracaoBairro.aspx.cs">
+      <DependentUpon>ApuracaoBairro.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Apuracao\Apuracao.aspx.designer.cs">
-      <DependentUpon>Apuracao.aspx</DependentUpon>
+    <Compile Include="Apuracao\ApuracaoBairro.aspx.designer.cs">
+      <DependentUpon>ApuracaoBairro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Apuracao\ApuracaoFaixaEtaria.aspx.cs">
+      <DependentUpon>ApuracaoFaixaEtaria.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Apuracao\ApuracaoFaixaEtaria.aspx.designer.cs">
+      <DependentUpon>ApuracaoFaixaEtaria.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Apuracao\ApuracaoTotal.aspx.cs">
+      <DependentUpon>ApuracaoTotal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Apuracao\ApuracaoTotal.aspx.designer.cs">
+      <DependentUpon>ApuracaoTotal.aspx</DependentUpon>
     </Compile>
     <Compile Include="ASP_PesquisaEleitoralDataSet.cs">
       <DependentUpon>ASP_PesquisaEleitoralDataSet.xsd</DependentUpon>
@@ -535,7 +551,7 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Apuracao\TotalFaixaEtaria.rdlc" />
+    <EmbeddedResource Include="Apuracao\TotalFE.rdlc" />
     <EmbeddedResource Include="Apuracao\TotalBairro.rdlc" />
     <EmbeddedResource Include="Apuracao\TotalCandidato.rdlc" />
     <EmbeddedResource Include="Migrations\201609141631277_Oi.resx">
