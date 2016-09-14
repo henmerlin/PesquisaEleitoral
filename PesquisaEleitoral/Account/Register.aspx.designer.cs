@@ -40,13 +40,22 @@ namespace PesquisaEleitoral.Account {
         protected global::System.Web.UI.WebControls.Calendar DataNascimento;
         
         /// <summary>
-        /// listBairros control.
+        /// ddpBairro control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListBox listBairros;
+        protected global::System.Web.UI.WebControls.DropDownList ddpBairro;
+        
+        /// <summary>
+        /// listaBairros control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource listaBairros;
         
         /// <summary>
         /// Password control.

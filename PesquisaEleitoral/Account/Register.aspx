@@ -27,9 +27,10 @@
         </div>
 
         <div class="form-group">
-            <asp:Label runat="server" AssociatedControlID="Bairro" CssClass="col-md-2 control-label">Bairro</asp:Label>
+            <asp:Label runat="server" AssociatedControlID="ddpBairro" CssClass="col-md-2 control-label">Bairro</asp:Label>
             <div class="col-md-10">
-                <asp:ListBox ID="listBairros" runat="server"></asp:ListBox>
+                <asp:DropDownList ID="ddpBairro" runat="server" DataSourceID="listaBairros" CssClass="form-control" DataTextField="Nome" DataValueField="Id" Width="193px"></asp:DropDownList>
+                <asp:SqlDataSource ID="listaBairros" runat="server" ConnectionString="<%$ ConnectionStrings:ASP_PesquisaEleitoralConnectionString %>" SelectCommand="SELECT [Id], [Nome] FROM [Bairros]"></asp:SqlDataSource>
             </div>
         </div>
 

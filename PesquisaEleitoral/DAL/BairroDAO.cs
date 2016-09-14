@@ -28,6 +28,10 @@ namespace PesquisaEleitoral.DAL
             return ctx.Bairros.FirstOrDefault(x => x.Nome.Equals(b.Nome));
         }
 
+        public static Models.Bairro VerificarBairroPorId(Models.Bairro b)
+        {
+            return ctx.Bairros.FirstOrDefault(x => x.Id == b.Id);
+        }
     }
 
 }

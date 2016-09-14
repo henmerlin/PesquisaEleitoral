@@ -4,18 +4,23 @@ using System.Web;
 using System.Web.UI;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
-using Owin;
 using PesquisaEleitoral.Models;
+using PesquisaEleitoral.DAL;
 
 namespace PesquisaEleitoral.Account
 {
     public partial class Register : Page
     {
+
         protected void CreateUser_Click(object sender, EventArgs e)
         {
             var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
             var signInManager = Context.GetOwinContext().Get<ApplicationSignInManager>();
-            var user = new ApplicationUser() { UserName = Email.Text, Email = Email.Text, DataNascimento = DataNascimento.SelectedDate};
+
+            Models.Bairro b = new Models.Bairro();
+            b.Id = Int32.Parse(ddpBairro.SelectedItem.Value);
+
+            var user = new ApplicationUser() { UserName = Email.Text, Email = Email.Text, DataNascimento = DataNascimento.SelectedDate, Bairro = BairroDAO.VerificarBairroPorId(b)};
             IdentityResult result = manager.Create(user, Password.Text);
             if (result.Succeeded)
             {
@@ -32,5 +37,6 @@ namespace PesquisaEleitoral.Account
                 ErrorMessage.Text = result.Errors.FirstOrDefault();
             }
         }
+
     }
 }
