@@ -76,6 +76,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -197,6 +198,7 @@
     <Content Include="Account\ResetPasswordConfirmation.aspx" />
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
+    <Content Include="Apuracao\Apuracao.aspx" />
     <Content Include="Bairro\CadastroBairro.aspx" />
     <Content Include="Bairro\CadastroError.aspx" />
     <Content Include="Bairro\CadastroExistente.aspx" />
@@ -215,6 +217,17 @@
     <Content Include="Account\Web.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ASP_PesquisaEleitoralDataSet.xsc">
+      <DependentUpon>ASP_PesquisaEleitoralDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="ASP_PesquisaEleitoralDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ASP_PesquisaEleitoralDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="ASP_PesquisaEleitoralDataSet.xss">
+      <DependentUpon>ASP_PesquisaEleitoralDataSet.xsd</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\ai.0.22.19-build00125.js" />
@@ -379,6 +392,21 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Apuracao\Apuracao.aspx.cs">
+      <DependentUpon>Apuracao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Apuracao\Apuracao.aspx.designer.cs">
+      <DependentUpon>Apuracao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ASP_PesquisaEleitoralDataSet.cs">
+      <DependentUpon>ASP_PesquisaEleitoralDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ASP_PesquisaEleitoralDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ASP_PesquisaEleitoralDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Bairro\CadastroBairro.aspx.cs">
       <DependentUpon>CadastroBairro.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
