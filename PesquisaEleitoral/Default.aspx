@@ -2,12 +2,10 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-
-    <asp:TextBox ID="txtUser" runat="server"></asp:TextBox>
     <div class="jumbotron">
         <h1>Pesquisa Eleitoral</h1>
         <p class="lead">Trabalho Prático 1 – C2, C4 e C6</p>
-        <p><a href="http://www.asp.net" class="btn btn-primary btn-lg">Apuração de Votos &raquo;</a></p>
+        <p><a href="/Apuracao/Apuracao" class="btn btn-primary btn-lg">Apuração de Votos &raquo;</a></p>
     </div>
 
     <div class="row">

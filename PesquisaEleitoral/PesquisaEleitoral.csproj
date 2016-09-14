@@ -535,6 +535,8 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Apuracao\TotalFaixaEtaria.rdlc" />
+    <EmbeddedResource Include="Apuracao\TotalBairro.rdlc" />
     <EmbeddedResource Include="Apuracao\TotalCandidato.rdlc" />
     <EmbeddedResource Include="Migrations\201609141631277_Oi.resx">
       <DependentUpon>201609141631277_Oi.cs</DependentUpon>
